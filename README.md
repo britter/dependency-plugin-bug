@@ -18,6 +18,12 @@ The build fails with:
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources) on project dependency-plugin-bug: Execution default-resources of goal org.apache.maven.plugins:maven-resources-plugin:2.6:resources failed: Plugin org.apache.maven.plugins:maven-resources-plugin:2.6 or one of its dependencies could not be resolved: The following artifacts could not be resolved: org.apache.maven:maven-profile:jar:2.0.6, org.apache.maven:maven-repository-metadata:jar:2.0.6, org.apache.maven:maven-plugin-registry:jar:2.0.6, classworlds:classworlds:jar:1.1-alpha-2: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven:maven-profile:jar:2.0.6 has not been downloaded from it before. -> [Help 1]
 ```
 
+## Solution
+
+The dependency plugin has a bug, or more precisely the version used: 2.8.
+
+Switching to latest 3.0.1 fixes the issue.
+
 ## Contribution policy
 
 Contributions via GitHub pull requests are gladly accepted from their original author. Along with any pull requests, please state that the contribution is your original work and that you license the work to the project under the project's open source license. Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
