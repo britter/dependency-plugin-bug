@@ -6,5 +6,6 @@ echo $MAVEN_OPTS
 echo "./mvnw dependency:go-offline"
 ./mvnw dependency:go-offline
 
-echo "./mvnw -o compile"
-./mvnw -o compile
+echo "./mvnw -o verify"
+./mvnw -o verify
+
